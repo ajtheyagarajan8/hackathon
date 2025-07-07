@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Roulette Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <h1>Roulette Game</h1>
+        <p>Click "Spin" to play!</p>
+    </header>
+    <div id="game-container">
+        <canvas id="game-canvas" width="500" height="500">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <button id="spin-btn">Spin</button>
+        <div id="loading">Loading...</div>
+    </div>
+    <footer>
+        &copy; 2025 - Team 9. All rights reserved.
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('loading').style.display = 'block';
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+            }, 500);
+        });
+    </script>
 </body>
 </html>
